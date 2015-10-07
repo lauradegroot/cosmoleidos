@@ -1,11 +1,11 @@
 $(function() {
-
   // get random date between june 16 1996 and today, format for the url
   var randomDate = function(start, end) {
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
   }
-  var formattedDate = randomDate(new Date(1996, 6, 16), new Date()).toISOString().substring(0, 10)
-
+  var firstAPODPost = new Date(1996, 6, 16)
+  var today = new Date()
+  var formattedDate = randomDate(firstAPODPost, today).toISOString().substring(0, 10)
   var urlString = window.location.href
   var nasaUrl = "https://api.nasa.gov/planetary/apod?concept_tags=False&api_key=ZeHs1xlBAtEBIAhcvT2aN6puHvknYEh9rcquGhLE&date="
   
