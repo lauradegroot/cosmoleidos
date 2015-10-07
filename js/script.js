@@ -26,7 +26,7 @@ $(function() {
     $.getJSON( nasaUrl +formattedDate , function( data ) {
      
       var urlParam = "?src=" + data.url
-      var clearedUrl = urlString.substring( 0, urlString.indexOf( "?src" )) + urlParam
+      var clearedUrl = urlString.substring( 0, urlString.indexOf( "?src" ))
       var newUrl = clearedUrl + urlParam
 
       window.location.href = newUrl;
